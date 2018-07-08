@@ -3,17 +3,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main() {
-	printf("*");
-		
+void gotoxy(int x, int y){
 	HANDLE hCon;
 	hCon = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD dwPos;
-	dwPos.X = 4;
-	dwPos.Y = 5;
+	dwPos.X = x;
 	SetConsoleCursorPosition(hCon, dwPos);
-	
+}
+
+int main() {
+	gotoxy(15,10);
 	printf("*");
-	
 	return 0;
 }
