@@ -8,6 +8,7 @@ void gotoxy(int x, int y){
 	hCon = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD dwPos;
 	dwPos.X = x;
+	dwPos.Y = y;
 	SetConsoleCursorPosition(hCon, dwPos);
 }
 
