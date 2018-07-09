@@ -10,11 +10,18 @@ int main()
 {
     SetColor(4);printf("%c%c%c%c%c%c%c%c%c%c\n",177,177,177,177,177,177,177,177,177,177);
     SetColor(6);printf("%c%c%c%c%c%c%c%c%c%c\n",178,178,178,178,178,178,178,178,178,178);
-    SetColor(6);printf("%c",178);SetColor(118);printf("[|]");SetColor(6);printf("%c%c%c%c%c%c\n\n",178,178,178,178,178,178);
+    SetColor(6);printf("%c",178);SetColor(118);printf("[|]");SetColor(6);printf("%c%c%c%c%c%c\n",178,178,178,178,178,178);
+    SetColor(15);printf("Granero\n\n");
     
-    SetColor(4);printf("%c%c%c%c\n",177,177,177,177);
-    SetColor(6);printf("%c%c%c%c\n",178,178,178,178);
-    SetColor(6);printf("%c",178);SetColor(118);printf("[]");SetColor(6);printf("%c\n",178);
-    SetColor(15);
+	SetColor(4);printf("%c%c%c%c%c%c\n",177,177,177,177,177,177);
+    SetColor(6);printf("%c%c%c%c%c%c\n",178,178,178,178,178,178);
+    SetColor(6);printf("%c%c",178,178);SetColor(118);printf("[]");SetColor(6);printf("%c%c\n",178,178);
+    SetColor(15);printf("Gallinero/Casa/Establo\n\n");
+    
+	SetColor(4);printf("%c%c%c%c%c%c%c%c%c%c\n",177,177,177,177,177,177,177,177,177,177);
+    SetColor(6);printf("%c%c%c%c%c%c%c%c%c%c\n",178,178,178,178,178,178,178,178,178,178);
+    SetColor(6);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(6);printf("%c%c%c%c\n",178,178,178,178);
+    SetColor(15);printf("Casa grande/Super/Clinica\n\n");
+    
     system("pause");   
 }
