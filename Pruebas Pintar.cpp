@@ -25,7 +25,7 @@ int main()
     SetColor(230);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(230);printf("%c%c%c%c\n",178,178,178,178);
     SetColor(15);printf("Casa grande/Super/Clinica\n\n");
     
-    int x = 5, y = 5, c = 108, t = 64; //rosa
+    int x = 30, y = 25, c = 106, t = 42; //rosa
     
     for(int i = 0; i <= 25; i++){
     	for(int j = 0; j <= 43; j++){
