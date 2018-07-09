@@ -42,10 +42,18 @@ int main() {
 		if(kbhit()){
 			char tecla = getch();
 			gotoxy(x,y); SetColor(15);printf(" ");
-			if(tecla == IZQUIERDA){x--;}//izquierda
-			if(tecla == DERECHA){x++;}//derecha
-			if(tecla == ARRIBA){y--;}//arriba
-			if(tecla == ABAJO){y++;}//abajo
+			if(tecla == IZQUIERDA){
+				if(x == 0){}else{x--;}
+			}//izquierda
+			if(tecla == DERECHA){
+				if(x == 99){}else{x++;}
+			}//derecha
+			if(tecla == ARRIBA){
+				if(y == 0){}else{y--;}
+			}//arriba
+			if(tecla == ABAJO){
+				if(y == 43){}else{y++;}
+			}//abajo
 			gotoxy(x,y); SetColor(9);printf("%c",1);
 		}
 		
