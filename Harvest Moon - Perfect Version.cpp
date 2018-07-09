@@ -26,22 +26,27 @@ void OcultarCursor(){
 	SetConsoleCursorInfo(hCon,&cci);
 }
 
+void SetColor (unsigned short color){
+	HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hcon,color);
+}
+
 int main() {
 	OcultarCursor();
 	int x = 10,y = 10;
-	gotoxy(x,y); printf("*");
+	gotoxy(x,y); SetColor(9);printf("%c",1);
 	bool game_over = false;
 
 	while(!game_over){
 		
 		if(kbhit()){
 			char tecla = getch();
-			gotoxy(x,y); printf(" ");
+			gotoxy(x,y); SetColor(15);printf(" ");
 			if(tecla == IZQUIERDA){x--;}//izquierda
 			if(tecla == DERECHA){x++;}//derecha
 			if(tecla == ARRIBA){y--;}//arriba
 			if(tecla == ABAJO){y++;}//abajo
-			gotoxy(x,y); printf("*");
+			gotoxy(x,y); SetColor(9);printf("%c",1);
 		}
 		
 		Sleep(30);
