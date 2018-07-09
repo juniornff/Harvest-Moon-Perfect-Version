@@ -25,11 +25,10 @@ int main()
     SetColor(230);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(230);printf("%c%c%c%c\n",178,178,178,178);
     SetColor(15);printf("Casa grande/Super/Clinica\n\n");
     
-    int i = 0, j = 0;
     int x = 5, y = 5, c = 108, t = 64; //rosa
     
-    for(i = 0; i <= 25; i++){
-    	for(j = 0; j <= 43; j++){
+    for(int i = 0; i <= 25; i++){
+    	for(int j = 0; j <= 43; j++){
     		if(j == x && i == y){
     			SetColor(c);printf("%c",t);
 			}else{
