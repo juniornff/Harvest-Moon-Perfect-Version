@@ -52,7 +52,7 @@ int main() {
 				if(y == 0){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
-				if(y == 43){}else{y++;}
+				if(y == 42){}else{y++;}
 			}//abajo
 			gotoxy(x,y); SetColor(9);printf("%c",1);
 		}
