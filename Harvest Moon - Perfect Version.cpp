@@ -34,14 +34,20 @@ void SetColor (unsigned short color){
 int main() {
 	OcultarCursor();
 	int x = 10,y = 10;
-	gotoxy(x,y); SetColor(9);printf("%c",1);
+	gotoxy(x,y); SetColor(13);  printf(" %c  ",1);
+	gotoxy(x,y+1); SetColor(13);printf("/%c%c ",221,92);
+	gotoxy(x,y+2); SetColor(13);printf(" %c  ",221);
+	gotoxy(x,y+3); SetColor(13);printf("/%c%c ",39,92);
 	bool game_over = false;
 
 	while(!game_over){
 		
 		if(kbhit()){
 			char tecla = getch();
-			gotoxy(x,y); SetColor(15);printf(" ");
+			gotoxy(x,y); SetColor(15);  printf("    ");
+			gotoxy(x,y+1); SetColor(15);printf("    ");
+			gotoxy(x,y+2); SetColor(15);printf("    ");
+			gotoxy(x,y+3); SetColor(15);printf("    ");
 			if(tecla == IZQUIERDA){
 				if(x == 0){}else{x--;}
 			}//izquierda
@@ -54,7 +60,10 @@ int main() {
 			if(tecla == ABAJO){
 				if(y == 42){}else{y++;}
 			}//abajo
-			gotoxy(x,y); SetColor(9);printf("%c",1);
+			gotoxy(x,y); SetColor(13);  printf(" %c  ",1);
+			gotoxy(x,y+1); SetColor(13);printf("/%c%c ",221,92);
+			gotoxy(x,y+2); SetColor(13);printf(" %c  ",221);
+			gotoxy(x,y+3); SetColor(13);printf("/%c%c ",39,92);
 		}
 		
 		Sleep(30);
