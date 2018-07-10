@@ -26,7 +26,7 @@ void OcultarCursor(){
 	SetConsoleCursorInfo(hCon,&cci);
 }
 
-void SetColor (unsigned short color){
+void SetColor(unsigned short color){
 	HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hcon,color);
 }
@@ -34,36 +34,36 @@ void SetColor (unsigned short color){
 int main() {
 	OcultarCursor();
 	int x = 10,y = 10;
-	gotoxy(x,y); SetColor(13);  printf(" %c  ",1);
-	gotoxy(x,y+1); SetColor(13);printf("/%c%c ",221,92);
-	gotoxy(x,y+2); SetColor(13);printf(" %c  ",221);
-	gotoxy(x,y+3); SetColor(13);printf("/%c%c ",39,92);
+	
+	gotoxy(x+1,y); SetColor(13);printf("%c",1);
+	gotoxy(x,y+1); SetColor(13);printf("/%c%c",221,92);
+	gotoxy(x+1,y+2); SetColor(13);printf("%c",221);
+	gotoxy(x,y+3); SetColor(13);printf("/%c%c",39,92);
 	bool game_over = false;
 
 	while(!game_over){
-		
 		if(kbhit()){
 			char tecla = getch();
-			gotoxy(x,y); SetColor(15);  printf("    ");
-			gotoxy(x,y+1); SetColor(15);printf("    ");
-			gotoxy(x,y+2); SetColor(15);printf("    ");
-			gotoxy(x,y+3); SetColor(15);printf("    ");
+			gotoxy(x+1,y); SetColor(15);printf(" ",1);
+			gotoxy(x,y+1); SetColor(15);printf("   ",221,92);
+			gotoxy(x+1,y+2); SetColor(15);printf(" ",221);
+			gotoxy(x,y+3); SetColor(15);printf("   ",39,92);
 			if(tecla == IZQUIERDA){
 				if(x == 0){}else{x--;}
 			}//izquierda
 			if(tecla == DERECHA){
-				if(x == 99){}else{x++;}
+				if(x == 97){}else{x++;}
 			}//derecha
 			if(tecla == ARRIBA){
 				if(y == 0){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
-				if(y == 42){}else{y++;}
+				if(y == 39){}else{y++;}
 			}//abajo
-			gotoxy(x,y); SetColor(13);  printf(" %c  ",1);
-			gotoxy(x,y+1); SetColor(13);printf("/%c%c ",221,92);
-			gotoxy(x,y+2); SetColor(13);printf(" %c  ",221);
-			gotoxy(x,y+3); SetColor(13);printf("/%c%c ",39,92);
+			gotoxy(x+1,y); SetColor(13);printf("%c",1);
+			gotoxy(x,y+1); SetColor(13);printf("/%c%c",221,92);
+			gotoxy(x+1,y+2); SetColor(13);printf("%c",221);
+			gotoxy(x,y+3); SetColor(13);printf("/%c%c",39,92);
 		}
 		
 		Sleep(30);
