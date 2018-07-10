@@ -68,16 +68,6 @@ int main()
 {
 	int techo, pared, puerta;
 	PintarCasa();
-	cout<<"Techo"<<endl;
-	PaletaDeColores();
-	cin>>techo;
-	cout<<"Pared"<<endl;
-	PaletaDeColores();
-	cin>>pared;
-	cout<<"Puerta"<<endl;
-	PaletaDeColores();
-	cin>>puerta;
-	PintarGraneroEstablo(techo,pared,puerta);
 	PintarCampoCultivo();
     SetColor(15);
 	system("pause");   
