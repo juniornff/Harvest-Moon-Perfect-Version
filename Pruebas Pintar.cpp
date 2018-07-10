@@ -11,30 +11,27 @@ void SetColor (unsigned short color){
 	HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hcon,color);
 }
-int main()
-{
+
+void PintarCasa(){
 	SetColor(15);printf(" ");SetColor(196);printf("%c%c%c%c%c",177,177,177,177,177);SetColor(230);printf("%c%c\n",178,178);
     SetColor(196);printf("%c%c%c%c%c%c%c",177,177,177,177,177,177,177);SetColor(230);printf("%c%c\n",178,178);
     SetColor(228);printf("%c",186);SetColor(230);printf("%c%c%c",178,178,178);SetColor(15);printf("%c",206);SetColor(230);printf("%c",178);SetColor(228);printf("%c",186);SetColor(230);printf("%c%c\n",178,178);
     SetColor(228);printf("%c",186);SetColor(230);printf("%c",178);SetColor(118);printf("[]");SetColor(230);printf("%c%c",178,178);SetColor(228);printf("%c",186);SetColor(230);printf("%c%c\n",178,178);
 	SetColor(15);printf("Casa\n\n");
-    
-    SetColor(15);printf(" ");SetColor(196);printf("%c%c%c%c%c%c",177,177,177,177,177,177);SetColor(230);printf("%c%c\n",178,178);
+}
+
+void PintarGraneroEstablo(){
+	SetColor(15);printf(" ");SetColor(196);printf("%c%c%c%c%c%c",177,177,177,177,177,177);SetColor(230);printf("%c%c\n",178,178);
 	SetColor(196);printf("%c%c%c%c%c%c%c%c",177,177,177,177,177,177,177,177);SetColor(230);printf("%c%c\n",178,178);
     SetColor(228);printf("%c",186);SetColor(230);printf("%c%c%c%c%c%c",178,178,178,178,178,178);SetColor(228);printf("%c",186);SetColor(230);printf("%c%c\n",178,178);
     SetColor(228);printf("%c",186);SetColor(230);printf("%c%c",178,178);SetColor(118);printf("[]");SetColor(230);printf("%c%c",178,178);SetColor(228);printf("%c",186);SetColor(230);printf("%c%c\n",178,178);
     SetColor(15);printf("Gallinero/Establo\n\n");
-    
-	SetColor(196);printf("%c%c%c%c%c%c%c%c%c%c\n",177,177,177,177,177,177,177,177,177,177);
-    SetColor(230);printf("%c%c%c%c%c%c%c%c%c%c\n",178,178,178,178,178,178,178,178,178,178);
-    SetColor(230);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(230);printf("%c%c%c%c\n",178,178,178,178);
-    SetColor(15);printf("Casa grande/Super/Clinica\n\n");
-    
-    int X, Y, Color, ItemID;
+}
+
+void PintarCampoCultivo(){
+	int X, Y, Color, ItemID;
     ifstream CeldasCampo;
-    
     CeldasCampo.open("CeldasCampo.txt",ios::in);
-    
     for(int i = 0; i <= 24; i++){
     	for(int j = 0; j <= 42; j++){
     		CeldasCampo>>X>>Y>>ItemID>>Color;
@@ -53,9 +50,18 @@ int main()
 			}
 		}
 	}
-	
 	CeldasCampo.close();
-    
+}
+
+int main()
+{
+	PintarCasa();
+	PintarGraneroEstablo();
+	SetColor(196);printf("%c%c%c%c%c%c%c%c%c%c\n",177,177,177,177,177,177,177,177,177,177);
+    SetColor(230);printf("%c%c%c%c%c%c%c%c%c%c\n",178,178,178,178,178,178,178,178,178,178);
+    SetColor(230);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(230);printf("%c%c%c%c\n",178,178,178,178);
+    SetColor(15);printf("Casa grande/Super/Clinica\n\n");
+    PintarCampoCultivo();
     SetColor(15);
 	system("pause");   
 }
