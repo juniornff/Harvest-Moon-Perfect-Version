@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
 
 void SetColor (unsigned short color){
 	HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -25,14 +30,22 @@ int main()
     SetColor(230);printf("%c%c%c",178,178,178);SetColor(118);printf("[|]");SetColor(230);printf("%c%c%c%c\n",178,178,178,178);
     SetColor(15);printf("Casa grande/Super/Clinica\n\n");
     
-    int x = 30, y = 25, c = 106, t = 42; //rosa
+    int X, Y, Color, ItemID;
+    ifstream CeldasCampo;
     
-    for(int i = 0; i <= 25; i++){
-    	for(int j = 0; j <= 43; j++){
-    		if(j == x && i == y){
-    			SetColor(c);printf("%c",t);
+    CeldasCampo.open("CeldasCampo.txt",ios::in);
+    
+    for(int i = 0; i <= 24; i++){
+    	for(int j = 0; j <= 42; j++){
+    		CeldasCampo>>X>>Y>>ItemID>>Color;
+    		if(j == X && i == Y){
+    			if(j == 42){
+    				SetColor(Color);printf("%c\n",ItemID);
+				}else{
+					SetColor(Color);printf("%c",ItemID);
+				}
 			}else{
-				if(j == 43){
+				if(j == 42){
     				SetColor(98);printf("%c\n",32);
 				}else{
 					SetColor(98);printf("%c",32);
@@ -40,6 +53,8 @@ int main()
 			}
 		}
 	}
+	
+	CeldasCampo.close();
     
     SetColor(15);
 	system("pause");   
