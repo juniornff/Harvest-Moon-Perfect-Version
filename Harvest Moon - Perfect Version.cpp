@@ -35,35 +35,33 @@ int main() {
 	OcultarCursor();
 	int x = 10,y = 10;
 	
-	gotoxy(x+1,y); SetColor(13);printf("%c",1);
-	gotoxy(x,y+1); SetColor(13);printf("/%c%c",221,92);
-	gotoxy(x+1,y+2); SetColor(13);printf("%c",221);
-	gotoxy(x,y+3); SetColor(13);printf("/%c%c",39,92);
+	gotoxy(x,y);SetColor(9);  printf("%c",1);
+	gotoxy(x,y+1);SetColor(9);printf("%c",197);
+	gotoxy(x,y+2);SetColor(9);printf("%c",94);
+	
 	bool game_over = false;
 
 	while(!game_over){
 		if(kbhit()){
 			char tecla = getch();
-			gotoxy(x+1,y); SetColor(15);printf(" ",1);
-			gotoxy(x,y+1); SetColor(15);printf("   ",221,92);
-			gotoxy(x+1,y+2); SetColor(15);printf(" ",221);
-			gotoxy(x,y+3); SetColor(15);printf("   ",39,92);
+			gotoxy(x,y);SetColor(15);  printf(" ");
+			gotoxy(x-1,y+1);SetColor(15);printf("  ");
+			gotoxy(x,y+2);SetColor(15);printf(" ");
 			if(tecla == IZQUIERDA){
 				if(x == 0){}else{x--;}
 			}//izquierda
 			if(tecla == DERECHA){
-				if(x == 97){}else{x++;}
+				if(x == 99){}else{x++;}
 			}//derecha
 			if(tecla == ARRIBA){
 				if(y == 0){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
-				if(y == 39){}else{y++;}
+				if(y == 41){}else{y++;}
 			}//abajo
-			gotoxy(x+1,y); SetColor(13);printf("%c",1);
-			gotoxy(x,y+1); SetColor(13);printf("/%c%c",221,92);
-			gotoxy(x+1,y+2); SetColor(13);printf("%c",221);
-			gotoxy(x,y+3); SetColor(13);printf("/%c%c",39,92);
+			gotoxy(x,y);SetColor(9);  printf("%c",1);
+			gotoxy(x,y+1);SetColor(9);printf("%c",197);
+			gotoxy(x,y+2);SetColor(9);printf("%c",94);
 		}
 		
 		Sleep(30);
