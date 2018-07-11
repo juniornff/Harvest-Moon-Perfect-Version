@@ -36,7 +36,7 @@ int main() {
 	int x = 10,y = 10;
 	
 	gotoxy(x,y);SetColor(9);  printf("%c",1);
-	gotoxy(x,y+1);SetColor(9);printf("%c",197);
+	gotoxy(x,y+1);SetColor(9);printf("%c",24);
 	gotoxy(x,y+2);SetColor(9);printf("%c",94);
 	
 	bool game_over = false;
@@ -45,7 +45,7 @@ int main() {
 		if(kbhit()){
 			char tecla = getch();
 			gotoxy(x,y);SetColor(15);  printf(" ");
-			gotoxy(x-1,y+1);SetColor(15);printf("  ");
+			gotoxy(x,y+1);SetColor(15);printf(" ");
 			gotoxy(x,y+2);SetColor(15);printf(" ");
 			if(tecla == IZQUIERDA){
 				if(x == 0){}else{x--;}
@@ -60,7 +60,7 @@ int main() {
 				if(y == 45){}else{y++;}
 			}//abajo
 			gotoxy(x,y);SetColor(9);  printf("%c",1);
-			gotoxy(x,y+1);SetColor(9);printf("%c",197);
+			gotoxy(x,y+1);SetColor(9);printf("%c",24);
 			gotoxy(x,y+2);SetColor(9);printf("%c",94);
 		}
 		
