@@ -10,7 +10,6 @@ int main(){
 	ofstream archivo;
 	ifstream CeldasCampo;
 	int origenx[42][24], origeny[42][24], origeni[42][24], origenc[42][24], x, ItemID, Color;
-	//remove("CeldasCampo.txt");
 	
 	CeldasCampo.open("CeldasCampo.txt",ios::in);
 	for(int oi = 0; oi <= 24; oi++){
@@ -19,6 +18,8 @@ int main(){
 		}
 	}
 	CeldasCampo.close();
+	
+	remove("CeldasCampo.txt");
 	
 	archivo.open("CeldasCampo.txt",ios::out);
 	for(int i = 0; i <= 24; i++){
