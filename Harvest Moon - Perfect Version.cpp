@@ -51,13 +51,13 @@ int main() {
 				if(x == 0){}else{x--;}
 			}//izquierda
 			if(tecla == DERECHA){
-				if(x == 99){}else{x++;}
+				if(x == 168){}else{x++;}
 			}//derecha
 			if(tecla == ARRIBA){
 				if(y == 0){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
-				if(y == 41){}else{y++;}
+				if(y == 45){}else{y++;}
 			}//abajo
 			gotoxy(x,y);SetColor(9);  printf("%c",1);
 			gotoxy(x,y+1);SetColor(9);printf("%c",197);
