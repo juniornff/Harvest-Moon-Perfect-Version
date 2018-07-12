@@ -6,6 +6,10 @@
 #define IZQUIERDA 75
 #define DERECHA 77
 #define ABAJO 80
+#define ESCAPE 27
+#define ENTER 13
+#define TAB 9
+#define ESPACIO 32
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -48,13 +52,13 @@ int main() {
 			gotoxy(x,y+1);SetColor(15);printf(" ");
 			gotoxy(x,y+2);SetColor(15);printf(" ");
 			if(tecla == IZQUIERDA){
-				if(x == 0){}else{x--;}
+				if(x == 1){}else{x--;}
 			}//izquierda
 			if(tecla == DERECHA){
-				if(x == 168){}else{x++;}
+				if(x == 111){}else{x++;}
 			}//derecha
 			if(tecla == ARRIBA){
-				if(y == 0){}else{y--;}
+				if(y == 1){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
 				if(y == 45){}else{y++;}
