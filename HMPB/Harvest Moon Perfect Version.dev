@@ -1,6 +1,6 @@
 [Project]
 FileName=Proyecto 3.dev
-Name=Proyecto 3
+Name=Harvest Moon Perfect Version
 Type=1
 Ver=2
 ObjFiles=
@@ -18,8 +18,8 @@ ExeOutput=
 ObjectOutput=
 LogOutput=
 LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=Proyecto 3.exe
+OverrideOutput=1
+OverrideOutputName=Harvest Moon Perfect Version.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=

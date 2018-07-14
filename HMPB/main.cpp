@@ -38,8 +38,6 @@ int main() {
 	PintarCasa(3,5);
 	PintarCampoCultivo(31,10);
 	gotoxy(x,y);SetColor(9);  printf("%c",1);
-	gotoxy(x,y+1);SetColor(9);printf("%c",24);
-	gotoxy(x,y+2);SetColor(9);printf("%c",94);
 	
 	bool game_over = false;
 
@@ -49,8 +47,6 @@ int main() {
 		if(kbhit()){
 			char tecla = getch();
 			gotoxy(x,y);SetColor(15);  printf(" ");
-			gotoxy(x,y+1);SetColor(15);printf(" ");
-			gotoxy(x,y+2);SetColor(15);printf(" ");
 			if(tecla == IZQUIERDA){
 				if(x == 1){}else{x--;}
 			}//izquierda
@@ -61,11 +57,9 @@ int main() {
 				if(y == 1){}else{y--;}
 			}//arriba
 			if(tecla == ABAJO){
-				if(y == 45){}else{y++;}
+				if(y == 47){}else{y++;}
 			}//abajo
-			gotoxy(x,y);SetColor(9);  printf("%c",1);
-			gotoxy(x,y+1);SetColor(9);printf("%c",24);
-			gotoxy(x,y+2);SetColor(9);printf("%c",94);SetColor(15);
+			gotoxy(x,y);SetColor(9);  printf("%c",1);SetColor(15);
 		}
 		
 		Sleep(30);
