@@ -3,8 +3,23 @@
 #include <fstream>
 #include <stdlib.h>
 #include <time.h>
+#include <dirent.h>
 
 using namespace std;
+
+bool is_file(string file)
+{
+ FILE * archivo;
+ if (archivo = fopen(file.c_str(), "r"))
+ {
+  fclose(archivo);
+  return true;           
+ }    
+ else
+ {
+  return false;  
+ }
+}
 
 void GeneralCeldasCampo(){
 	ofstream archivo;
@@ -95,7 +110,7 @@ void GeneralCeldasCampo(){
 			}else{
 				archivo<<j<<"	"<<i<<"	"<<ItemID<<"	"<<Color<<endl;
 			}
-			
 		}
 	}
+	archivo.close();
 }
