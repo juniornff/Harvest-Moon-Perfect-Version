@@ -45,7 +45,6 @@ int main() {
 
 	while(!game_over){
 		
-		
 		if(kbhit()){
 			char tecla = getch();
 			gotoxy(x,y);SetColor(15);  printf(" ");
@@ -63,8 +62,7 @@ int main() {
 			}//abajo
 			gotoxy(x,y);SetColor(9);  printf("%c",1);SetColor(15);
 		}
-		
-		Sleep(30);
+		Sleep(100);
 	}
 	return 0;
 }
