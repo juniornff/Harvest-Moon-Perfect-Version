@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o pintar.o SetColor.o contorno.o gotoxy.o
-LINKOBJ  = main.o pintar.o SetColor.o contorno.o gotoxy.o
+OBJ      = main.o pintar.o SetColor.o contorno.o gotoxy.o GenerarCeldasCampo.o
+LINKOBJ  = main.o pintar.o SetColor.o contorno.o gotoxy.o GenerarCeldasCampo.o
 LIBS     = -L"C:/Dev-Cpp/MinGW64/lib" -L"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -L"C:/Dev-Cpp/lib" -static-libgcc
 INCS     = -I"C:/Dev-Cpp/MinGW64/include" -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Dev-Cpp/include"
 CXXINCS  = -I"C:/Dev-Cpp/MinGW64/include" -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Dev-Cpp/include"
@@ -38,3 +38,6 @@ contorno.o: contorno.cpp
 
 gotoxy.o: gotoxy.cpp
 	$(CPP) -c gotoxy.cpp -o gotoxy.o $(CXXFLAGS)
+
+GenerarCeldasCampo.o: GenerarCeldasCampo.cpp
+	$(CPP) -c GenerarCeldasCampo.cpp -o GenerarCeldasCampo.o $(CXXFLAGS)

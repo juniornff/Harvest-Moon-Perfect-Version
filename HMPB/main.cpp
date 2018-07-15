@@ -20,6 +20,7 @@ void contorno();
 void PaletaDeColores();
 void PintarCasa(int x, int y);
 void PintarGraneroEstablo(int techo, int pared, int puerta);
+void GeneralCeldasCampo();
 void PintarCampoCultivo(int px, int py);
 //-----------------------------------------------------
 
@@ -36,6 +37,7 @@ int main() {
 	int x = 1,y = 1;
 	contorno();
 	PintarCasa(3,5);
+	GeneralCeldasCampo();
 	PintarCampoCultivo(31,10);
 	gotoxy(x,y);SetColor(9);  printf("%c",1);
 	
