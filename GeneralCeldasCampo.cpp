@@ -29,61 +29,61 @@ int main(){
     		switch(x){
     			case 1: ItemID = 79;
 						Color = 104;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 2: ItemID = 207;
 						Color = 100;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 3: ItemID = 42;
 						Color = 98;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 4: ItemID = 47;
 						Color = 100;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 5: ItemID = 127;
 						Color = 104;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 6: ItemID = 32;
 						Color = 102;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 7: ItemID = 32;
 						Color = 102;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 8: ItemID = 32;
 						Color = 102;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 9: ItemID = 32;
 						Color = 102;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
 				case 10: ItemID = 32;
 						Color = 102;
-						if(j == origenx[j][i] && i == origeny[j][i] && ItemID == origeni[j][i]){
+						if(ItemID == origeni[j][i]){
 							goto cambio;
 						}
 						break;
