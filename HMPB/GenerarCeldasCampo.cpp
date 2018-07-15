@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main(){
+void GeneralCeldasCampo(){
 	ofstream archivo;
 	ifstream CeldasCampo;
 	int origenx[42][24], origeny[42][24], origeni[42][24], origenc[42][24], x, ItemID, Color;
@@ -96,6 +96,4 @@ int main(){
 			
 		}
 	}
-	archivo.close();
-	system("pause");
 }
