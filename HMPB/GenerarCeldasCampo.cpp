@@ -21,6 +21,8 @@ void GeneralCeldasCampo(){
 	
 	remove("CeldasCampo.txt");
 	
+	srand (time(NULL));
+	
 	archivo.open("CeldasCampo.txt",ios::out);
 	for(int i = 0; i <= 24; i++){
     	for(int j = 0; j <= 42; j++){
