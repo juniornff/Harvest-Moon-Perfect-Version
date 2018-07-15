@@ -25,6 +25,7 @@ void GeneralCeldasCampo(){
 	ofstream archivo;
 	ifstream CeldasCampo;
 	int origenx[42][24], origeny[42][24], origeni[42][24], origenc[42][24], x, ItemID, Color;
+	srand (time(NULL));
 	
 	CeldasCampo.open("CeldasCampo.txt",ios::in);
 	for(int oi = 0; oi <= 24; oi++){
@@ -33,10 +34,7 @@ void GeneralCeldasCampo(){
 		}
 	}
 	CeldasCampo.close();
-	
 	remove("CeldasCampo.txt");
-	
-	srand (time(NULL));
 	
 	archivo.open("CeldasCampo.txt",ios::out);
 	for(int i = 0; i <= 24; i++){
