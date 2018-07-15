@@ -25,7 +25,7 @@ void GeneralCeldasCampo(){
 	for(int i = 0; i <= 24; i++){
     	for(int j = 0; j <= 42; j++){
     		cambio:
-			x=1+rand()%(11-1);
+			x=rand() % 10 + 1;
     		switch(x){
     			case 1: ItemID = 79;
 						Color = 104;
