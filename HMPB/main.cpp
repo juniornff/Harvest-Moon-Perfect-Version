@@ -28,6 +28,7 @@ void OcultarCursor(){
 	HANDLE hCon;
 	hCon = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO cci;
+	cci.dwSize = 2;
 	cci.bVisible = FALSE;
 	SetConsoleCursorInfo(hCon,&cci);
 }
@@ -62,7 +63,7 @@ int main() {
 			}//abajo
 			gotoxy(x,y);SetColor(9);  printf("%c",1);SetColor(15);
 		}
-		Sleep(100);
+		Sleep(50);
 	}
 	return 0;
 }
