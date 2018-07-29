@@ -1,0 +1,2 @@
+Allegro stable devpaks are located by the Allegro project at:
+http://sourceforge.net/project/showfiles.php?group_id=5665&package_id=168871
